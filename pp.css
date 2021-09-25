@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 36pt;
+    color: rgb(248, 1, 1);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: fantasy
+    font-size: 30pt;
+    color: violet;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: cursive;
+    font-size: 12pt;
+    border: rgb(19, 148, 223) solid 3px;
+    margin: 40px;
+    padding: 10px 10px 10px 10px;
+    width: 50%;
+  }
+  #one {
+      background-color: cornflowerblue;
+  }
+  #two {
+      background-color: rgb(243, 138, 1);
+  }
+  .intro {
+    background-image: linear-gradient(aqua, rgb(172, 187, 40));
+  }
+  #three {
+    background-color: yellowgreen;
+  }
+  #four {
+    background-color: thistle;
+  }

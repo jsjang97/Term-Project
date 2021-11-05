@@ -227,6 +227,7 @@ div {
   font-size: 1em;
   outline: none;
   border: 1px solid var(--midnight);
+      display: flex;
 }
 
 .inputBox textarea {
@@ -249,7 +250,6 @@ div {
 
 
 .infoBox{
-    display: flex;
     align-items: center;
     margin-top: 10px;
     font-family: var(--Montserrat);
@@ -283,6 +283,7 @@ div {
 
 .map{
     padding: 10px 10px 10px 10px;
+    
 }
 .map h3{
     font-family: var(--Montserrat);

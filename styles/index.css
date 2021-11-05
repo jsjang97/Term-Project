@@ -37,30 +37,29 @@ html {
   width: 100%;
 }
 
-.text-title{
-    font-family: var(--Poppins);
+.text-title {
+  font-family: var(--Poppins);
 }
 
-.secondary-title{
-    font-family: var(--Poppins);
+.secondary-title {
+  font-family: var(--Poppins);
 }
 
+.display-1 {
+  font-size: 22px;
+}
+.display-2 {
+  font-size: 15px;
+}
+.display-3 {
+  font-size: 12px;
+}
 
-.display-1{
-    font-size: 22px;
+.text-center {
+  text-align: center;
 }
-.display-2{
-    font-size: 15px;
-}
-.display-3{
-    font-size: 12px;
-}
-
-.text-center{
-    text-align: center;
-}
-.text-right{
-    text-align: right;
+.text-right {
+  text-align: right;
 }
 
 /* GLOBAL  */
@@ -72,7 +71,7 @@ html {
   height: 0rem;
   min-height: 50vh;
   overflow: hidden;
-  transition:height 1s ease-in-out
+  transition: height 1s ease-in-out;
 }
 
 .nav .nav-menu {
@@ -91,16 +90,13 @@ html {
   justify-content: flex-end;
   padding: 1.7rem 0;
 }
- 
+
 .nav .toggle-collapse .toggle-icon i {
   font-size: 1.5rem;
   color: var(--midnight);
-
-
 }
 
 .collapse-t {
-
   height: 30rem;
   overflow: hidden;
   transition: all 0.9s ease-in-out;
@@ -144,21 +140,67 @@ html {
 #site-main {
   margin-top: 8em;
 }
-#posts{
-    margin-bottom: 5em;
+#posts {
+  margin-bottom: 5em;
 }
 
-.grid{
-    margin: 0 auto;
+* {
+  font-family: var(--Poppins);
+  transform-style: preserve-3d;
+  margin: 0;
+  padding: 0;
+  display:flexbox;
 }
 
-.grid .grid-item{
-    width: 300px ;
-    margin-bottom: 3em;
+.container {
+  position: relative;
+  column-count: 4;
+  padding: 20px 20px;
+}
 
+.image {
+  display: inline-block;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+h1 {
+  position: absolute;
+  padding: 5px;
+  margin: 5px;
+  font-size: 25px;
+  background: var(--forest);
+  color: aliceblue;
+  border-radius: 7px;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.2 ease-in-out;
+}
+
+.image:hover h1 {
+  opacity: 0.5;
 }
 
 /* ------------XX------------Main------------XX----------- */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    column-count: 3;
+  }
+}
 
 /* Veiwport less then or equal to 800px */
 
@@ -166,7 +208,7 @@ html {
   .nav {
     flex-direction: column;
   }
-  
+
   .nav .toggle-collapse {
     display: initial;
   }

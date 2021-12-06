@@ -305,3 +305,14 @@ label:hover{
   transform: scale(0);
   position: absolute;
 }
+
+footer {
+  background-color: var(--text-beige);
+  padding: 20px 23px;
+  color: white;
+  font-family: var(--Montserrat);
+  text-align: center;
+}
+footer span a{
+  color: var(--midnight);
+}

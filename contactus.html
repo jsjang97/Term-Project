@@ -99,7 +99,11 @@
 
                 <div class="inputBox">
                   <span>Mobile:</span>
-                  <input id="mobile" type="text" placeholder="+1 213 500 1509" />
+                  <input
+                    id="mobile"
+                    type="text"
+                    placeholder="+1 213 500 1509"
+                  />
                 </div>
               </div>
 
@@ -168,38 +172,50 @@
 
         <div class="contact map">
           <h3>Where I Work!</h3>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.424276579632!2d-73.98178328463383!3d40.75269217932755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25901aced9e39%3A0x8d9e1a0ce53a5509!2sPricewaterhouseCoopers%20LLP!5e0!3m2!1sen!2sus!4v1638754822820!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.424276579632!2d-73.98178328463383!3d40.75269217932755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25901aced9e39%3A0x8d9e1a0ce53a5509!2sPricewaterhouseCoopers%20LLP!5e0!3m2!1sen!2sus!4v1638754822820!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>
-    <script>
-      document.getElementById("submit-btn").onclick = function () {
-        validate();
-      };
-
-      function validate() {
-        console.log("start validating...");
-        const fname = document.getElementById("firstname").value;
-        const lname = document.getElementById("lastname").value;
-        const email = document.getElementById("email").value;
-        const mobile = document.getElementById("mobile").value;
-        if (
-          document.forms["Form"][("fname", "lname", "email", "mobile")].value.length == 0
-        ) {
-          alert("Please fill in the empty fields");
-          let r = document.getElementById("output");
-          r.value = "NaN";
-        } 
-        if (isNaN(mobile)) {
-          alert("Please enter a valid number for your mobile number");
-        }
-        if (isNaN(fname) === false){
-          alert("Please enter a valid name")
-        }
-        if (isNaN(lname) == false){
-          alert("Please enter a valid name")
-        }
-      }
-    </script>
+    <footer>
+      Created By Alex Joonsung Jang |
+      <span class="far fa-copyright"></span> 2021 All rights reserved. | <span><a href="sitemap.html">Site Map</a></span>
+    </footer>
   </body>
+  <script>
+    document.getElementById("submit-btn").onclick = function () {
+      validate();
+    };
+
+    function validate() {
+      console.log("start validating...");
+      const fname = document.getElementById("firstname").value;
+      const lname = document.getElementById("lastname").value;
+      const email = document.getElementById("email").value;
+      const mobile = document.getElementById("mobile").value;
+      if (
+        document.forms["Form"][("fname", "lname", "email", "mobile")].value
+          .length == 0
+      ) {
+        alert("Please fill in the empty fields");
+        let r = document.getElementById("output");
+        r.value = "NaN";
+      }
+      if (isNaN(mobile)) {
+        alert("Please enter a valid number for your mobile number");
+      }
+      if (isNaN(fname) === false) {
+        alert("Please enter a valid name");
+      }
+      if (isNaN(lname) == false) {
+        alert("Please enter a valid name");
+      }
+    }
+  </script>
 </html>

@@ -66,7 +66,9 @@ html {
 
 /* --------------------------nav----------------------- */
 .nav {
-  background: whitesmoke;
+  position: fixed;
+  width: 100%;
+  background: rgb(0, 0, 0);
   padding: 0 2rem;
   height: 0rem;
   min-height: 10vh;
@@ -170,6 +172,47 @@ li.dropdown {
 
 /* ------------XX--------------nav-------------XX-------- */
 
+.home {
+  display: flex;
+  background: url("/images/golf5.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: var(--Poppins);
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+
+.home .home-content .text-1 {
+  font-size: 20px;
+}
+.home .home-content .text-2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-3 {
+  font-size: 30px;
+  margin: 5px 0;
+}
+.home .home-content .text-3 span {
+color: var(--red);
+}
+.home .home-content .button{
+  margin: 80px 0;
+}
+.home .home-content .button a{
+  text-decoration: none;
+  background: var(--red);
+  border-radius: 45px;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
+  letter-spacing: 1.3px;
+}
 /* --------------------------Main----------------------- */
 
 *{
@@ -258,11 +301,6 @@ li.dropdown {
   font-size: 1em;
 
 }
-
-
-
-
-
 }
 
 
@@ -288,4 +326,17 @@ li.dropdown {
   .nav .toggle-collapse {
     display: initial;
   }
+}
+
+
+
+footer {
+  background-color: var(--text-beige);
+  padding: 20px 23px;
+  color: white;
+  font-family: var(--Montserrat);
+  text-align: center;
+}
+footer span a{
+  color: var(--midnight);
 }

@@ -135,7 +135,11 @@ html {
   color: var(--forest);
 }
 /* ------------XX--------------nav-------------XX-------- */
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 h1{
     text-align: center;
@@ -201,4 +205,16 @@ h1::before{
 
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid var(--forest);
+}
+
+
+footer {
+  background-color: var(--text-beige);
+  padding: 20px 23px;
+  color: white;
+  font-family: var(--Montserrat);
+  text-align: center;
+}
+footer span a{
+  color: var(--midnight);
 }

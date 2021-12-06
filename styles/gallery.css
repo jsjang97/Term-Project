@@ -155,9 +155,32 @@ input{
 
 h1{
     font-weight: normal;
-    font-size: 40px;
+    font-size: 35px;
     position: relative;
     margin: 40px 0;
+}
+
+h1::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: crimson;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate{
+  0%{
+    width: 100px;
+  }
+  50%{
+    width: 200px;
+  }
+  100%{
+    width: 100px;
+  }
 }
 
 .top-content{
@@ -180,12 +203,12 @@ h3{
 label{
     display: inline-block;
     height: 100%;
-    padding: 0px 5px;
+    padding: 0px 10px;
     margin: 0 50px;
     line-height: 60px;
     font-size: 17px;
     cursor: pointer;
-    transition: .3s;
+    transition: .4s;
 }
 label:hover{
     color: white;
@@ -195,7 +218,7 @@ label:hover{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     /* grid-auto-rows: auto;
     grid-auto-columns: auto ; */
     grid-gap: 20px;
@@ -203,17 +226,28 @@ label:hover{
 
 .pic{
     position: relative;
-    height: 230px;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 500px;
+    box-shadow: 3px 3px 5px lightgoldenrodyellow;
 }
 .pic img{ 
     width: 100%;
-    height: auto;
-    margin-bottom: 100px;
+    height: 100%;
     border-radius: 10px;
 }
 
+/* .pic::before{
+  content: "PHOTO GALLERY";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: -100px;
+} */
 .pic:hover::after{
     height: 100%;
 }
@@ -227,17 +261,47 @@ label:hover{
     opacity: 1;
     transform: scale(1);
     position: relative;
+    transition: .5s;
 }
 
 #check2:checked ~ .container .photo-gallery .travel{
     opacity: 1;
     transform: scale(1);
     position: relative;
-}
+    transition: .5s;
+ }
 
-#check2:checked ~ .container .photo-gallery .golf,
-#check2:checked ~ .container .photo-gallery .food{
+#check2:checked ~ .container .photo-gallery .food,
+#check2:checked ~ .container .photo-gallery .golf{
     opacity: 0;
     transform: scale(0);
     position: absolute;
+}
+
+#check3:checked ~ .container .photo-gallery .golf{
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: .5s;
+}
+
+#check3:checked ~ .container .photo-gallery .travel,
+#check3:checked ~ .container .photo-gallery .food{
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+}
+
+#check4:checked ~ .container .photo-gallery .food{
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: .5s;
+}
+
+#check4:checked ~ .container .photo-gallery .travel,
+#check4:checked ~ .container .photo-gallery .golf{
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
 }
